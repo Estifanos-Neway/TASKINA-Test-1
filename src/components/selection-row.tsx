@@ -1,6 +1,12 @@
 import { useState } from "react";
 import CheckBox from "./check-box"
 
+type SelectionRowProps = {
+    name: string
+    toggle: (value: boolean) => void
+    isSelected: boolean
+}
+
 function SelectionRow({ name, toggle, isSelected }: SelectionRowProps) {
     const [justUnselected, setJustUnselected] = useState(false);
     return (
@@ -16,12 +22,6 @@ function SelectionRow({ name, toggle, isSelected }: SelectionRowProps) {
             </div>
         </label>
     )
-}
-
-type SelectionRowProps = {
-    name: string
-    toggle: (value: boolean) => void
-    isSelected: boolean
 }
 
 export default SelectionRow

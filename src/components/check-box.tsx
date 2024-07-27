@@ -1,5 +1,12 @@
 import clsx from "clsx";
 
+type CheckBoxProps = {
+  toggle: (value: boolean) => void
+  isSelected: boolean,
+  justUnselected: boolean,
+  setJustUnselected: (value: boolean) => void
+}
+
 function CheckBox({ toggle: toggleSelection, isSelected, justUnselected, setJustUnselected }: CheckBoxProps) {
 
   function processToggle(e: React.ChangeEvent<HTMLInputElement>) {
@@ -36,13 +43,6 @@ function CheckBox({ toggle: toggleSelection, isSelected, justUnselected, setJust
       <input type="checkbox" checked={isSelected} onChange={processToggle} className="hidden" />
     </>
   );
-}
-
-type CheckBoxProps = {
-  toggle: (value: boolean) => void
-  isSelected: boolean,
-  justUnselected: boolean,
-  setJustUnselected: (value: boolean) => void
 }
 
 export default CheckBox;
