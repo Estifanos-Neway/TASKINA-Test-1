@@ -42,8 +42,8 @@ function App() {
 
   return (
     <main className='flex justify-center items-center bg-black h-screen text-text font-montserrat font-normal text-[14px] [line-height:18.2px]'>
-      <div className="relative w-[578px] bg-white h-[794px] max-h-[80%]">
-        <div className="absolute top-[85px] left-[104px] rounded-[6px] border border-border w-[Hug(370px)] h-[Hug(326px)] py-[10px] shadow-custom-box">
+      <div className="flex justify-center items-start w-[578px] bg-white h-[794px] max-h-[80%]">
+        <div className="rounded-[6px] border border-border w-[Hug(370px)] h-[Hug(326px)] py-[10px] shadow-custom-box mt-[85px]">
 
           {/* ---------------------All Pages-------------------------------- */}
           <SelectionRow
